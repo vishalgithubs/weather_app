@@ -1,0 +1,70 @@
+<div class="refresh-div">
+    <!-- <button (click)="refresh()"><img style="margin:2px ;" src="./assets/refresh-icon.png" height="18px" width="18px">Refresh Button</button> -->
+    <button type="button" (click)="refresh()"><img style="margin:2px ;" src="./assets/refresh-icon.png" height="18px" width="18px">Refresh Button</button>
+
+</div>
+
+<div class="current-weather">
+
+
+    <div class="data-according-time">
+
+        <div class="time-12pm">
+            <div style="display: flex;">
+                <div class="sun-1">
+                    <img src="http://openweathermap.org/img/wn/{{icon}}@2x.png" height="200px">
+                </div>
+                <div class="current-location">
+                    <span class="location-current"
+                        *ngIf="!(cityName==''||cityName==null||stateName==''||stateName==null||countryName==''||countryName==null)">
+                        Your Location is
+                        <span style="font-weight: bolder;">
+                            {{cityName}}{{','+' '+stateName}}{{','+' '+countryName}}
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-class">
+            <div class="weather-data">
+                <div style="display: flex;">
+                    <span><span style="font-weight: bolder;">Current Temp :-</span>
+                        <span>
+                            {{convertedtemp}}&#8451;
+                        </span>
+                    </span>
+                </div>
+                <div style="display: flex;">
+                    <span><span style="font-weight: bolder;">Current Temp Min :-</span><span>
+                        </span>
+                        {{convertedtemp_min}}&#8451;
+                    </span>
+                </div>
+                <div style="display: flex;">
+                    <span><span style="font-weight: bolder;">Current Temp Max :-</span>
+                        <span>
+                            {{convertedtemp_max}}&#8451;
+                        </span>
+                    </span>
+                </div>
+                <div>
+                    <span><span style="font-weight: bolder;">Current Feels Like :-</span>
+                        <span>
+                            {{convertedfeels_like | number : '.2-2'}}&#8451;
+                        </span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="today-weather">
+                <span style="font-weight: bolder;">Current Weather :-</span>&nbsp;{{currentWeather}}
+            </div>
+
+        </div>
+    </div>
+
+
+</div>
+
+<app-graph></app-graph>

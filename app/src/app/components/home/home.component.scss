@@ -1,0 +1,45 @@
+*{
+    color: black;
+}
+.current-weather{
+    background-color: aqua;
+    width: fit-content;
+    margin: 5vh 5vh 20px 6vh;
+    border-radius: 50px;
+    height: auto;
+}
+.sun-1 {
+    padding: 35px 0px 0px 44px;
+}
+.current-location {
+    padding: 79px 0px 0px 31px;
+    font-size: x-large;
+    display: flex;
+}
+.location-current{
+    width: fit-content;
+    height: fit-content;
+    padding: 0px 20px 0px 0px;
+}
+.weather-data{
+    padding: 0px 78px 25px 93px;
+}
+.flex-class{
+    display: flex;
+}
+.refresh-div {
+    float: right;
+    margin: 10px;
+}
+button {
+    background-color: white;
+    border: 3px solid red;
+    border-radius: 10px;
+    font-weight: bold;
+    color: black;
+    :hover{
+        background-color: white;
+        border: 2px solid black;
+        color: black;
+    }
+}
